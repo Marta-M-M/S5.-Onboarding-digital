@@ -28,41 +28,74 @@ p {
   transform: scale(0.8);
 }
 
-.btn {
-  border-radius: 60%;
-  font-size: 16px;
-  padding: 10px 20px;
-  background-color: #000000;
-  color: #ffffff;
-  border-color: black;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+/*Esto permite que los botones esten separados y uno en el margen izquierdo y el otro en el margen derecho*/
+.custom-buttons-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-.btn:hover {
-  background-color: #312b2b;
-  cursor: pointer;
-}
-
+.guion-buttons,
 .arrow-buttons {
   display: flex;
-  /* flex-direction: column; */
-  align-items: flex-end;
+  padding: 1;
 }
 
-.minus-buttons {
-  display: flex;
-  /* flex-direction: column; */
-  align-items: flex-end;
+
+/*Boton - y .*/
+.guion-buttons button {
+  background-color: transparent;
+  padding: 1;
+  font-size: 2.8em;
+  border: 0;
 }
 
-.btn-container {
-  display: flex;
-  justify-content: flex-end;
-  gap: 73px;
+/* Estilos para los botones de flechas (<- y ->) */
+   .arrow-buttons button {
+      border-radius: 50%;
+      font-size: 1.5em;
+      width: 2em;
+      height: 2em;
+   }
+
+   /* Añade una flecha más estilizada hacia atrás solo al botón btn-back utilizando el pseudo-elemento ::before */
+   .arrow-buttons button#btn-back::before {
+      content: '\2190';
+   }
+
+   /* Añade una flecha más estilizada utilizando el pseudo-elemento ::before */
+   .arrow-buttons button::before {
+      content: '\2192';
+   }
+
+   /* Añade separación entre botones de flechas */
+   .arrow-buttons button {
+      margin-right: 10px;
+   }
+
+ /* Estilos para el guión */
+.guion-buttons button {
+  background-color: transparent;
+  padding: 0;
+  font-size: 2.2em;
+  border: 0;
 }
 
-.btn-arrow {
-  display: inline-block !important;
+.guion-buttons button::before {
+  content: '\2013';
+  color: #ffffff;
+}
+
+/* Estilos para el punto */
+.punto-buttons button {
+  background-color: transparent;
+  padding: 0;
+  font-size: 2.5em;
+  border: 0;
+}
+
+.punto-buttons button::before {
+  content: '\00B7';
+  font-weight: bold;
 }
 
 #top {

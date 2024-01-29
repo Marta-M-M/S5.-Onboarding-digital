@@ -1,5 +1,5 @@
 <div id="allbody" class="container ">
-  <div class="row">
+  <div class="row ">
 
     @for (onBoardingPhrase of showPhrases; track $index) {
 
@@ -18,33 +18,35 @@
         <div class="card-body ms-0 me-0 pt-4" style="height: 15rem; display: flex; flex-direction: column;">
           <h3>{{ onBoardingPhrase.title }}</h3>
           <p class="card-text text-secondary">{{ onBoardingPhrase.description }}</p>
-          <div class="d-flex justify-content-between align-items-center" style=" margin-top: auto;">
-
-            <!-- BOTONES -->
-            <div class="ml-auto btn-container" style="display: flex; justify-content: flex-end; gap: 13px;">
-              <!-- guión -->
-              <div class="guion-buttons">
-                @for(onBoardingPhrase of showPhrases; track $index){
+          <!-- BOTONES -->
+          <div class="d-flex justify-content-between align-items-end p-3 custom-buttons-container">
+            <!-- guión -->
+            <div class="guion-buttons">
+              @for(onBoardingPhrase of showPhrases; track $index){
+              <div>
                 @if($index === actualStep){
-                <button class="btn btn-outline-white border-0 fs-1 m-0 p-0">-</button>
+                <button class="btn btn-outline-white border-0 fs-1 m-0 p-0 guion-buttons guion-button">-</button>
                 }@else{
                 <button (click)="nextStep()"
-                  class="btn btn-outline-white border-0 fs-1 p-0 text-secondary opacity-50">·</button>
-                }
+                  class="btn btn-outline-white border-0 fs-1 p-0 text-secondary opacity-50 punto-buttons">.</button>
                 }
               </div>
-              <!--Flecha-->
-              <div class="arrow-buttons">
-                @if(actualStep > 0){
-                <button (click)="lastStep()" class="btn btn-outline-dark me-2 pt-2 pb-2 btn-arrow" id="btn-back"> <-
-                    </button>
-                    }
 
-                    @if(actualStep < 2){ <button (click)="nextStep()" class="btn btn-dark pt-2 pb-2 ml-auto btn-arrow"
-                      id="btn-advance"> -> </button>
+              }
+
+            </div>
+
+            <!--Flecha-->
+            <div class="arrow-buttons">
+              @if(actualStep > 0){
+              <button (click)="lastStep()" class="btn btn-outline-dark me-2 pt-2 pb-2 btn-arrow" id="btn-back">
+              </button>
+              }
+              @if(actualStep < 2){ <button (click)="nextStep()" class="btn btn-dark pt-2 pb-2 ml-auto btn-arrow"
+                id="btn-advance"> </button>
                 }
 
-              </div>
+
             </div>
           </div>
         </div>
@@ -52,6 +54,5 @@
     </div>
     }
     }
-
   </div>
 </div>
