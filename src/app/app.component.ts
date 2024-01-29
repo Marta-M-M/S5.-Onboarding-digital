@@ -14,10 +14,3 @@ import { EscenaComponent } from './escena/escena.component';
 export class AppComponent {
   public title: string = 'S5.-Onboarding';
 }
-//Quitar??
-// export interface iStep {
-//       title: string;
-//       description: string;
-//       img: string;
-//       bgcolor: string;
-// }

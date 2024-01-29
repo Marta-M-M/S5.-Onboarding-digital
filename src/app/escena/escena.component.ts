@@ -11,37 +11,37 @@ import { iStep } from '../interfaces/iStep.interface';
 })
 export class EscenaComponent {
   //usamos @Input para recibir datos desde el componente Home (padre). Establecemos relación padre-hijo
- @Input()
- public showPhrases: iStep[] = [{
-  title: '',
-  description: '',
-  img: '',
-  bgcolor: ''
- }];
+  @Input()
+  public showPhrases: iStep[] = [{
+    title: '',
+    description: '',
+    img: '',
+    bgcolor: ''
+  }];
 
- public actualStep : number = 0;
+  public actualStep: number = 0;
 
- lastStep(){
-   if (this.actualStep > 0) {
-     this.actualStep--;
-   } else {
-     this.actualStep = this.showPhrases.length - 1;
-   }
-   console.log(this.actualStep);
- }
+  lastStep() {
+    if (this.actualStep > 0) {
+      this.actualStep--;
+    } else {
+      this.actualStep = this.showPhrases.length - 1;
+    }
+    console.log(this.actualStep);
+  }
 
- nextStep() {
-   if(this.actualStep < this.showPhrases.length -1){
-     this.actualStep ++;
-   }else{
-     this.actualStep = 0
-   }
+  nextStep() {
+    if (this.actualStep < this.showPhrases.length - 1) {
+      this.actualStep++;
+    } else {
+      this.actualStep = 0
+    }
 
-   console.log(this.actualStep)
- }
+    console.log(this.actualStep)
+  }
 
- activeStep(){
-   this.actualStep = this.showPhrases.length
- }
+  activeStep() {
+    this.actualStep = this.showPhrases.length
+  }
 
 }
