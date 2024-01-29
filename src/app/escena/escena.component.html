@@ -1,0 +1,57 @@
+<div id="allbody" class="container ">
+  <div class="row">
+
+    @for (onBoardingPhrase of showPhrases; track $index) {
+
+    @if($index === actualStep){
+
+    <div class="col-12 col-sm-4 card m-2 p-0 shadow" style="width: 20rem;">
+
+      <div [style.backgroundColor]="onBoardingPhrase.bgcolor" style="width: auto; height: 25rem;" class="pt-5" id="top">
+        <img [src]=" 'assets/' + onBoardingPhrase.img" alt="{{onBoardingPhrase.title}}" class="card-img-top pt-5"
+          style="width: 100%; height: 25rem;">
+      </div>
+
+      <!-- Creamos div para integrar titulo descripcion y botones en el mismo container y que salga blanco -->
+      <div class=container id="bottom-body">
+
+        <div class="card-body ms-0 me-0 pt-4" style="height: 15rem; display: flex; flex-direction: column;">
+          <h3>{{ onBoardingPhrase.title }}</h3>
+          <p class="card-text text-secondary">{{ onBoardingPhrase.description }}</p>
+          <div class="d-flex justify-content-between align-items-center" style=" margin-top: auto;">
+
+            <!-- BOTONES -->
+            <div class="ml-auto btn-container" style="display: flex; justify-content: flex-end; gap: 13px;">
+              <!-- guión -->
+              <div class="guion-buttons">
+                @for(onBoardingPhrase of showPhrases; track $index){
+                @if($index === actualStep){
+                <button class="btn btn-outline-white border-0 fs-1 m-0 p-0">-</button>
+                }@else{
+                <button (click)="nextStep()"
+                  class="btn btn-outline-white border-0 fs-1 p-0 text-secondary opacity-50">·</button>
+                }
+                }
+              </div>
+              <!--Flecha-->
+              <div class="arrow-buttons">
+                @if(actualStep > 0){
+                <button (click)="lastStep()" class="btn btn-outline-dark me-2 pt-2 pb-2 btn-arrow" id="btn-back"> <-
+                    </button>
+                    }
+
+                    @if(actualStep < 2){ <button (click)="nextStep()" class="btn btn-dark pt-2 pb-2 ml-auto btn-arrow"
+                      id="btn-advance"> -> </button>
+                }
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+    }
+
+  </div>
+</div>

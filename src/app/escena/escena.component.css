@@ -1,0 +1,129 @@
+/* Ruta relativa para las imagenes */
+/* <link rel = "stylesheet" href=""> */
+
+/* se refiere a la raiz del documento, por encima de body y html. A el documento entero, está por encima de todo */
+/* :root {
+  /* color-scheme: light-dark; */
+  /* background-color: gray;
+} */
+
+/* :host {
+  display: block;
+  border: 1px solid rgb(241, 8, 8);
+  /* font-style: italic; */
+/* } */
+
+#allbody {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: grey;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+h6{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+
+}
+
+p{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 10pt;
+}
+
+.card{
+  border-radius: 7%;
+  transform: scale(0.8);
+}
+
+.btn{
+  border-radius: 60%;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border-color: black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #312b2b;
+  cursor: pointer;
+}
+
+.arrow-buttons {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: flex-end;
+}
+
+.minus-buttons {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: flex-end;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 73px;
+}
+
+.btn-arrow {
+  display: inline-block !important;
+}
+
+#top{
+  border-top-right-radius: 7%;
+  border-top-left-radius: 7%;
+}
+
+#bottom{
+  border-top-right-radius: 7%;
+  border-top-left-radius: 7%;
+}
+
+#bottom-body {
+  background-color: white;
+  /* border: 1px solid black; */
+  padding: 20px;
+  border-bottom-right-radius: 7%;
+  border-bottom-left-radius: 7%;
+}
+
+
+/* .rectangulo {
+  width: 250px;
+  height: 100px;
+  border: 3px solid #555;
+  background: #428bca;
+} */
+/*
+.escena1{
+  width: 250px;
+  /* height: 100px; */
+  /* border: 3px solid #555; */
+  /* background: #428bca; */
+/* } */
+
+/* .container {
+  display: flex;
+  justify-content: center;
+} */
+
+/* .step-container {
+  text-align: center;
+  padding: 20px; /* Ajusta el relleno según tus necesidades */
+  /*border-radius: 10px;  Agrega esquinas redondeadas según tus necesidades */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Agrega sombra según tus necesidades */
+  /* max-width: 300px; Ajusta el ancho máximo según tus necesidades */
+  /* margin: 10px; Agrega márgenes según tus necesidades */
+/* }   */
+
