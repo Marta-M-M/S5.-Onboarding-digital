@@ -41,12 +41,28 @@ p {
 }
 
 
-/*Boton - y .*/
+/* Boton - y . */
 .guion-buttons button {
   background-color: transparent;
   padding: 1;
-  font-size: 2.8em;
+  font-size: x-small;
   border: 0;
+  margin-top: 20px;
+}
+
+/* Estilos para el guión */
+.guion-buttons {
+  background-color: transparent;
+  padding: 0;
+  font-size: x-large;
+  border: 0;
+  width: 2em;
+  height: 2em;
+}
+
+.guion-buttons .guion-individual{
+  font-size: x-large;
+  margin-top: 12px;
 }
 
 /* Estilos para los botones de flechas (<- y ->) */
@@ -72,28 +88,14 @@ p {
       margin-right: 10px;
    }
 
- /* Estilos para el guión */
-.guion-buttons button {
-  background-color: transparent;
-  padding: 0;
-  font-size: 2.2em;
-  border: 0;
-}
-
-.guion-buttons button::before {
-  content: '\2013';
-  color: #ffffff;
-}
-
 /* Estilos para el punto */
-.punto-buttons button {
+  .punto-buttons button {
   background-color: transparent;
   padding: 0;
-  font-size: 2.5em;
   border: 0;
 }
 
-.punto-buttons button::before {
+ .punto-buttons button::before {
   content: '\00B7';
   font-weight: bold;
 }

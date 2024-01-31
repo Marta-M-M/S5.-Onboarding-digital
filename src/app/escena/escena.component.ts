@@ -40,8 +40,8 @@ export class EscenaComponent {
     console.log(this.actualStep)
   }
 
-  activeStep() {
-    this.actualStep = this.showPhrases.length
+  activeStep(index: number) {
+    this.actualStep = index;
   }
 
 }

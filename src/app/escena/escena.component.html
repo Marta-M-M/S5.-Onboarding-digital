@@ -25,10 +25,15 @@
               @for(onBoardingPhrase of showPhrases; track $index){
               <div>
                 @if($index === actualStep){
-                <button class="btn btn-outline-white border-0 fs-1 m-0 p-0 guion-buttons guion-button">-</button>
+                <button class="btn btn-outline-white border-0 fs-1 m-0 p-0 guion-individual">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
                 }@else{
-                <button (click)="nextStep()"
-                  class="btn btn-outline-white border-0 fs-1 p-0 text-secondary opacity-50 punto-buttons">.</button>
+                <button (click)="activeStep($index)"
+                  class="btn btn-outline-white border-0 fs-1 p-0 text-secondary opacity-50 punto-buttons">
+                  <!-- <i class="fas fa-circle fa-sm"></i> -->
+                  <i class="fa-solid fa-circle fa-2xs"></i>
+                </button>
                 }
               </div>
 
